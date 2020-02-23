@@ -4,12 +4,12 @@ description: Postdock chart for kubernetes
 name: PostDock
 version: 1.2.0
 maintainers:
-  - name: Dmitry Paunin
-    email: d.m.paunin@gmail.com
-home: https://github.com/paunin/PostDock
+  - name: Philippe Gauthier
+    email: elfelip@yahoo.com
+home: https://github.com/elfelip/PostDock
 sources:
-- https://github.com/paunin/PostDock
-icon: https://raw.githubusercontent.com/paunin/PostDock/master/artwork/logo.png
+- https://github.com/elfelip/PostDock
+icon: https://raw.githubusercontent.com/elfelip/PostDock/master/artwork/logo.png
 keywords:
 - database
 - postgres
