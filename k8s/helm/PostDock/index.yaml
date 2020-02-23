@@ -1,0 +1,26 @@
+apiVersion: v1
+entries:
+  PostDock:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-02-23T09:30:24.97167292-05:00"
+    description: Postdock chart for kubernetes
+    digest: a099beee758138d916b7c8c229edc965178045008e42494364da27e21abbcc79
+    home: https://github.com/paunin/PostDock
+    icon: https://raw.githubusercontent.com/paunin/PostDock/master/artwork/logo.png
+    keywords:
+    - database
+    - postgres
+    - postgresql
+    - postdock
+    - cluster
+    maintainers:
+    - email: d.m.paunin@gmail.com
+      name: Dmitry Paunin
+    name: PostDock
+    sources:
+    - https://github.com/paunin/PostDock
+    urls:
+    - PostDock-1.2.0.tgz
+    version: 1.2.0
+generated: "2020-02-23T09:30:24.969314376-05:00"

@@ -4,7 +4,7 @@
 
 postDock:
   # setup.name - name for your setup, unique name allows you to have many releases of postdock in the same namespace
-  name: mysystem
+  name: pgtest
 # postgres - postgres component related settings
 postgres:
   # postgres.image - is the image to use for postgres component
@@ -14,15 +14,15 @@ postgres:
   # postgres.replicas - number of nodes in you postgres cluster
   replicas: 3
   # postgres.clusterName - cluster name inside PostDock
-  clusterName: mysystem_cluster
+  clusterName: pgtest_cluster
   # postgres.db - database and credentials for it which will be created on PostDock start
   db:
     # postgres.db.name - database name
-    name: mysystem.mysystem
+    name: pgtest.pgtest
     # postgres.db.user - database user to access DB {postgres.db.name}
-    user: wide
+    user: pgtest_admin
     # postgres.db.password - database user {postgres.db.user} password
-    password: pass
+    password: Adm1n1tr@t0r
   # postgres.replicationDb - database for metadata and credentials for it which will be created on PostDock start
   replicationDb:
     # postgres.replicationDb.user - database user to access DB {postgres.replicationDb.name}
@@ -49,13 +49,13 @@ postgres:
     #                     volumeID: vol-xxxxxxx
     #                 ```
     - volume:
-        size: 100Gi
+        size: 10Gi
         reclaimPolicy: Delete
     - volume:
-        size: 100Gi
+        size: 10Gi
         reclaimPolicy: Delete
     - volume:
-        size: 100Gi
+        size: 10Gi
         reclaimPolicy: Delete
   # postgres.resources - define (in k8s style) resources for postgres pods of PostDock release
   resources:
@@ -74,7 +74,7 @@ pgpool:
   # pgpool.replicas - number of pgpools for your cluster
   replicas: 2
   # pgpool.users - users in format of PostDock to access cluster through pgpool (@see https://github.com/paunin/PostDock#pgpool)
-  users: wide:pass
+  users: admin:Adm1n1tr@t0r
   # pgpool.pcp - pcp settings for pgpool
   pcp:
     # pgpool.pcp.user - username for pcp access
@@ -103,5 +103,5 @@ barman:
   env:
   # barman.volume - same as {postgres.nodes.[*].volume}
   volume:
-    size: 200Gi
+    size: 20Gi
     reclaimPolicy: Delete
