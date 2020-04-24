@@ -1,20 +1,23 @@
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   namespace: mysystem
   name: mysystem-db-node
   labels:
     name: database
-    system: mysystem
+    system: mysystem-db
     app: mysystem
 spec:
+  selector:
+    matchLabels:
+      system: mysystem-db
   replicas: 3
   serviceName: "mysystem-db"
   template:
     metadata:
       labels:
         name: database
-        system: mysystem
+        system: mysystem-db
     spec:
       containers:
         - name: db-node

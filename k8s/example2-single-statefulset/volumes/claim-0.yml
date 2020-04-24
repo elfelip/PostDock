@@ -8,8 +8,11 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 100Gi
+      storage: 10Gi
   selector:
     matchLabels:
       system: mysystem-db
       node: node-0
+  storageClassName: local-path
+  volumeName: db-data-mysystem-db-node-0
+  volumeMode: Filesystem

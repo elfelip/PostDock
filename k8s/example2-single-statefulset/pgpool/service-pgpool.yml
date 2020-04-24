@@ -6,7 +6,7 @@ metadata:
   labels:
     name: database-balancer
     node: pgpool
-    system: mysystem
+    system: mysystem-lb
 spec:
   ports:
     - port: 5432
@@ -14,4 +14,4 @@ spec:
   selector:
     name: database-balancer
     node: pgpool
-    system: mysystem
+    system: mysystem-lb

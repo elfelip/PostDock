@@ -9,10 +9,10 @@ spec:
   accessModes:
   - ReadWriteOnce
   capacity:
-    storage: 100Gi
+    storage: 10Gi
   persistentVolumeReclaimPolicy: Delete
   hostPath:
-    path: /tmp/db-data-mysystem-db-node-1
+    path: /opt/local-path-provisioner/db-data-mysystem-db-node-1
   # awsElasticBlockStore:
   #   fsType: ext4
   #   volumeID: vol-xxxxxxx

@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   namespace: mysystem
@@ -6,9 +6,13 @@ metadata:
   labels:
     name: database-balancer
     node: pgpool
-    system: mysystem
+    system: mysystem-lb
     app: mysystem
 spec:
+  selector:
+    matchLabels:
+      system: mysystem-lb
+
   replicas: 2
   revisionHistoryLimit: 5
   template:
@@ -17,7 +21,7 @@ spec:
       labels:
         name: database-balancer
         node: pgpool
-        system: mysystem
+        system: mysystem-lb
         app: mysystem
     spec:
       containers:
